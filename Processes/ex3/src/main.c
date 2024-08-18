@@ -6,7 +6,7 @@ int main() {
   while (1) {
     printf("$ ");
     fgets(command, sizeof(command), stdin);
-    command[strcspn(command, "\n")] = 0; // Удаление символа новой строки
+    command[strcspn(command, "\n")] = 0;
 
     if (strcmp(command, "exit") == 0) {
       break;
