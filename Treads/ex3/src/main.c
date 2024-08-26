@@ -2,14 +2,12 @@
     int shops[NUM_SHOP]; // магазины
     pthread_mutex_t shop_mutexs[NUM_SHOP]; // мьютексы для магазинов
 
-
 int main(){
-   // int shoper_needs[MAX_NEED_SHOPER]; // потребность покупателей
     pthread_t shopers[NUM_SHOPER]; // покупатели
     pthread_t loader_thread; // погрузчик
 
     srand(time(NULL));
-    //инициализация магазиновcle
+    //инициализация магазинов
     for(int i = 0; i < NUM_SHOP; i++){
         shops[i] = rand() % (RANDOM_VAL +1);
         printf("Магазин %d мой баланс %d\n",i,shops[i]);
